@@ -34,7 +34,7 @@ This is an example use case for an Wholesale Food Company whose business is to 
 
 4. **Regional buyers** and **Purveyors** about Food Prices the Customer wants to buy
 
-![alt tag](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![alt tag](wholesale-food-co./Dataflow.png)
 
 Note: All the data is fake and we have no idea if this is how the food industry works. 
 
