@@ -1,13 +1,15 @@
-# Build a data analysis tool using Bokeh
+# Build a Data Analysis Tool using Bokeh
 
 ## Intended Audience:
 Developer(s) who want to build a robust, custom data analysis tool for the web.
 
-## Main Design Considerations:
-- System centered around analysts development workflow, and the end user
+## Main Features:
+- System centered around analysts development workflow
 - No data duplication for the different interactive tools
-- Data frequency limited by data models computation time
-- Production server can be updated by non developers
+- Data frequency limited 'only' by data model(s) computation time
+- Each Bokeh app is independent, but follows a load data 'api' - Non developers can easily load new bokeh apps into production 
+  1. At their own pace
+  2. Without fear of crashing the rest of the app
 
 ## Experience Needed:
 Some minimal coding experience and lots of curiosity. We were a team of 3... 2 members of our team had < 1 month experience in python
@@ -21,8 +23,8 @@ It took us 3 months.  Knowing what we know now, it would probably take about 1.
 | tornado        | web server                     |
 | flask          | web pages                      |
 | sqlalchemy     | connecting to databases        |
-|pandas          | dataframes                     |
-|bokeh           | interactive data visualizations|
+| pandas         | dataframes                     |
+| bokeh          | interactive data visualizations|
 
 ## Running The Example:
 For instructions on how to run the example, go [here](https://github.com/adam-hubbell/wholesale-food-co./blob/master/fruit_market/how_to_run_the_server.txt)
@@ -46,3 +48,8 @@ Note: All the data is fake and we have no idea if this is how the food industry 
 The system processes about 260 million rows of a *fully normalized data* or ~10 gigs in memory. When the analyst and web server receive the data, it blows up to 44 gigs and then shrinks back to *megabytes* on the bokeh app.
 
 ![System Overview](https://github.com/gryBox/wholesale-food-co./blob/master/Dataflow.png)
+
+## Next Steps
+- ![distributed](http://distributed.readthedocs.io/en/latest/) 
+- ![Luigi](https://luigi.readthedocs.io/en/stable/)
+- 
