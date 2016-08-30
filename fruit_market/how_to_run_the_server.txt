@@ -1,0 +1,3 @@
+-Run mothership.py
+-To see live data in action, go to the Daily_Prices tab, then open data/TodaysPrices.csv change some values, and save.
+-This piece was developed, tested, and run only on Windows 7. 
