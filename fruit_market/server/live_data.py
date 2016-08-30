@@ -57,5 +57,5 @@ class live_data_loader(object):
 			self.has_new_data = True
 		#starts the threads to watch the server
 		for key,path in cp['LIVE'].items():	
-			threads.append(threading.Thread(target=self.live_data_thread,args=(key,os.path.dirname(os.path.abspath(__file__))+'\\..\\'+path,frequency)))
+			threads.append(threading.Thread(target=self.live_data_thread,args=(key,os.path.join(os.path.dirname(os.path.abspath(__file__)),'..',path.replace('\\','',1)),frequency)))
 			threads[-1].start()

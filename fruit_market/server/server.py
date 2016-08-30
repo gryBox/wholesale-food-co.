@@ -64,7 +64,7 @@ class BigServer(object):
 					print(e)
 			other_divs ={}     
 			for i in self.embedable_divs:
-				f = open(this_path+'\other_pages/'+i,'r')
+				f = open(os.path.join(this_path,'other_pages',i),'r')
 				i=i.replace('.','_')
 				other_divs[i]=f.read()
 				f.close() 
@@ -196,7 +196,7 @@ class BigServer(object):
 		self.ldl = live_data.live_data_loader()#instantiate the live data loader class
 		self.insert_data(self.ldl.get_data())#insert the initial data from the live files
 		self.insert_data(init_dfs)#insert the data passed on init
-		self.embedable_divs = os.listdir(this_path+'\\other_pages\\')
+		self.embedable_divs = os.listdir(os.path.join(this_path,'other_pages\\'))
 		#a little magic to make bokeh server work right
 		self.app_path_dict = {}
 		for app in self.app_names:
