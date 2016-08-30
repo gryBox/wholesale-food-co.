@@ -23,6 +23,9 @@ It took us 3 months.  Knowing what we know now, it would probably take about 1.
 |pandas|dataframes|
 |bokeh|interactive data visualizations|
 
+## Running The Example:
+For instructions on how to run the example, go [here](https://github.com/adam-hubbell/wholesale-food-co./blob/master/fruit_market/how_to_run_the_server.txt)
+
 ## Story Line:
 This is an example use case for an Wholesale Food Company whose business is to find fruit of varying quality around the world at the best price for:
 
