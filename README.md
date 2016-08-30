@@ -16,12 +16,13 @@ Some minimal coding experience and lots of curiosity. We were a team of 3... 2 
 It took us 3 months.  Knowing what we know now, it would probably take about 1.5 months.
 
 ## Main Packages:
-||Python Package||Use||
-|tornado|web server|
-|flask|web pages|
-|sqlalchemy|connecting to databases|
-|pandas|dataframes|
-|bokeh|interactive data visualizations|
+| Python Package | Use                            |
+| -------------- | ------------------------------ |
+| tornado        | web server                     |
+| flask          | web pages                      |
+| sqlalchemy     | connecting to databases        |
+|pandas          | dataframes                     |
+|bokeh           | interactive data visualizations|
 
 ## Story Line:
 This is an example use case for an Wholesale Food Company whose business is to find fruit of varying quality around the world at the best price for:
@@ -33,9 +34,11 @@ This is an example use case for an Wholesale Food Company whose business is to 
 3. **Analysts** that allow the Food Shoppers to have informed conversations with ...
 
 4. **Regional buyers** and **Purveyors** about Food Prices the Customer wants to buy
+
 ![System Overview](https://github.com/gryBox/wholesale-food-co./blob/master/System Overview.png)
 Note: All the data is fake and we have no idea if this is how the food industry works.
 
 ## Data Pipeline:
 The system processes about 260 million rows of a *fully normalized data* or ~10 gigs in memory. When the analyst and web server receive the data, it blows up to 44 gigs and then shrinks back to *megabytes* on the bokeh app.
+
 ![System Overview](https://github.com/gryBox/wholesale-food-co./blob/master/Dataflow.png)
