@@ -5,6 +5,7 @@ def clean_dfs(big_dict,bokeh_dir):
 	all_dirs = os.listdir(bokeh_dir)
 	ret_dict = {}
 	
+	print('cleaning dfs, this could take a second...')
 	#loop through all of the bokeh directories
 	for dir_name in all_dirs:
 		#load and initialize the cleaning_functions.py. It's like an import, but using a variable filepate
