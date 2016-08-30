@@ -50,6 +50,5 @@ The system processes about 260 million rows of a *fully normalized data* or ~1
 ![System Overview](https://github.com/gryBox/wholesale-food-co./blob/master/Dataflow.png)
 
 ## Next Steps
-- ![distributed](http://distributed.readthedocs.io/en/latest/) 
-- ![Luigi](https://luigi.readthedocs.io/en/stable/)
-- 
+- [distributed](http://distributed.readthedocs.io/en/latest/) 
+- [Luigi](https://luigi.readthedocs.io/en/stable/)
