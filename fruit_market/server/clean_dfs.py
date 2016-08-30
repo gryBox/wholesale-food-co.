@@ -1,14 +1,9 @@
 import importlib.util
 import os
 def clean_dfs(big_dict,bokeh_dir):
-	
-	print('Cleaning Data for Bokeh App .. This will take a couple of secs')
-	
 	#get a list of all bokeh directories
 	all_dirs = os.listdir(bokeh_dir)
 	ret_dict = {}
-	
-	
 	
 	#loop through all of the bokeh directories
 	for dir_name in all_dirs:

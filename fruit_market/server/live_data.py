@@ -49,11 +49,11 @@ class live_data_loader(object):
 
 		#reads the config file and gets the locations of the files to watch
 		cp = ConfigParser()
-		cp.read(os.path.dirname(os.path.abspath(__file__))+'\\data_locations.ini')
+		cp.read(os.path.join(os.path.dirname(os.path.abspath(__file__)),'data_locations.ini'))
 
 		#does one initial read so the server can grab the data initially
 		for key,path in cp['LIVE'].items():
-			self.data[key]=self.readit(os.path.dirname(os.path.abspath(__file__))+'\\..\\'+path)
+			self.data[key]=self.readit(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..',path.replace('\\','',1)))
 			self.has_new_data = True
 		#starts the threads to watch the server
 		for key,path in cp['LIVE'].items():	

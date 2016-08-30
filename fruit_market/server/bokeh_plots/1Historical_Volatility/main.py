@@ -17,7 +17,7 @@ import time
 
 #grab the lev utils from a relative file path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(os.path.dirname(os.path.abspath(__file__))+'\\..\\..\\..\\')
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..\\..\\..\\'))
 from example_utils.math_utils import math_utils as mu
 
 import numpy as np
