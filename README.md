@@ -36,6 +36,7 @@ This is an example use case for an Wholesale Food Company whose business is to 
 4. **Regional buyers** and **Purveyors** about Food Prices the Customer wants to buy
 
 ![System Overview](https://github.com/gryBox/wholesale-food-co./blob/master/System Overview.png)
+
 Note: All the data is fake and we have no idea if this is how the food industry works.
 
 ## Data Pipeline:
