@@ -24,6 +24,7 @@ class BigServer(object):
 
 	def setup_bokeh(self):
 		##turn file paths into bokeh apps
+
 		apps = build_single_handler_applications(self.app_path_dict.keys(),self.app_path_dict)
 		
 		##kwargs lifted from bokeh serve call to Server, with the addition of my own io_loop
@@ -187,8 +188,11 @@ class BigServer(object):
 	def __init__(self,init_dfs):
 
 		#initialization
-		self.app_path = this_path+'\\bokeh_plots\\'#a little hard coded, but I'm over it
-		self.app_names = os.listdir(self.app_path)#finds the name of all of the dirs in the bokeh directory	
+		self.app_path = os.path.join(this_path,'bokeh_plots/')#a little hard coded, but I'm over it
+		self.app_names = []
+		for app in os.listdir(self.app_path):#finds the name of all of the dirs in the bokeh directory
+			if os.path.isdir(os.path.join(self.app_path,app)):
+				self.app_names.append(app)
 		self.close_it = False#boolean used to shut down cleanly on ctrl-c event
 		self.df_dict = {}#dict containing all existing dfs
 		self.clean_dict = {}#dict containing dfs that've been passed through the cleaning functions
@@ -196,7 +200,7 @@ class BigServer(object):
 		self.ldl = live_data.live_data_loader()#instantiate the live data loader class
 		self.insert_data(self.ldl.get_data())#insert the initial data from the live files
 		self.insert_data(init_dfs)#insert the data passed on init
-		self.embedable_divs = os.listdir(os.path.join(this_path,'other_pages\\'))
+		self.embedable_divs = os.listdir(os.path.join(this_path,'other_pages/'))
 		#a little magic to make bokeh server work right
 		self.app_path_dict = {}
 		for app in self.app_names:

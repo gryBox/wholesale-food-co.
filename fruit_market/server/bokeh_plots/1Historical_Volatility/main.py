@@ -6,7 +6,7 @@ import copy
 from collections import OrderedDict
 import sys
 import os
-from seaborn import SEABORN_PALETTES
+from seaborn.palettes import SEABORN_PALETTES
 import pandas as pd
 from bokeh.plotting import figure,curdoc
 from bokeh.models import HBox, TapTool,VBox,HoverTool, WidgetBox, WheelZoomTool, SaveTool, PanTool, Legend,BoxZoomTool,DataRange1d,CustomJS
@@ -17,7 +17,7 @@ import time
 
 #grab the lev utils from a relative file path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..\\..\\..\\'))
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)),'../../../'))
 from example_utils.math_utils import math_utils as mu
 
 import numpy as np

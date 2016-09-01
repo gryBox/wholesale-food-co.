@@ -53,9 +53,9 @@ class live_data_loader(object):
 
 		#does one initial read so the server can grab the data initially
 		for key,path in cp['LIVE'].items():
-			self.data[key]=self.readit(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..',path.replace('\\','',1)))
+			self.data[key]=self.readit(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..',path.replace('\\','')))
 			self.has_new_data = True
 		#starts the threads to watch the server
 		for key,path in cp['LIVE'].items():	
-			threads.append(threading.Thread(target=self.live_data_thread,args=(key,os.path.join(os.path.dirname(os.path.abspath(__file__)),'..',path.replace('\\','',1)),frequency)))
+			threads.append(threading.Thread(target=self.live_data_thread,args=(key,os.path.join(os.path.dirname(os.path.abspath(__file__)),'..',path),frequency)))
 			threads[-1].start()
