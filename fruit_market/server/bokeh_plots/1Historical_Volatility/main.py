@@ -123,7 +123,7 @@ def buildPlot():
 
 	
 	#Asset_Class, Product, and From dropdown boxes. Sets dropdown's initial value.
-	asCls = Select(title="Asset Class",options=ddOpts['Asset_Class'].unique().tolist())
+	asCls = Select(title="Food Type",options=ddOpts['Asset_Class'].unique().tolist())
 	asCls.value =asCls.options[0]
 	prod = Select(title="Products",options=ddOpts[ddOpts['Asset_Class']==asCls.value]['Product'].unique().tolist())
 	prod.value =prod.options[0]
